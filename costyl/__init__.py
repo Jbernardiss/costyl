@@ -49,9 +49,6 @@ class Costyl:
 
         predicted_authors = []
 
-        print(self.__target_files_data_matrix)
-        input()
-
         predicted_authors = self.__model.predict(self.__target_files_data_matrix)
 
         self.__labels_predicted_authors = dict(zip(self.__target_files_labels, predicted_authors))
