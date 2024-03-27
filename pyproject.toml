@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "costyl"
-version = "0.2.0"
+version = "0.2.1"
 description = "Costyl is a python library to facilitate source code authorship attribution via stylometric analysis powered by machine learning."
 authors = ["Jbernardiss <joaobernardiss@gmail.com>"]
 readme = "README.md"
