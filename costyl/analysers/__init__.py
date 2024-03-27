@@ -1,6 +1,9 @@
 
-from layout import layout_analysis
-from lexical import lexical_analysis
+from .layout import layout_analysis
+from .lexical import lexical_analysis
+
+import numpy as np
+
 
 def analyse_vectorized_files(vectorized_files_whole: list[str], vectorized_files_lines: list[list[str]]) -> np.ndarray:
     """

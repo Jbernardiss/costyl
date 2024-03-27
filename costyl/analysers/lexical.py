@@ -2,11 +2,6 @@
 import math
 import numpy as np
 
-try:
-    from modules.vectorizer import vectorizeWholeFile
-except:
-    from vectorizer import vectorizeWholeFile
-
 import re
 
 from sklearn.feature_extraction.text import CountVectorizer

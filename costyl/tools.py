@@ -42,4 +42,5 @@ def printTestsPredicts(y_test, predictedAuthor):
     print(f'Erros: {erros}')
 
 def determine_algorithm():
+    #TODO implement this function
     pass
