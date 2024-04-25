@@ -195,8 +195,13 @@ def lexical_analysis(files: list[str]) -> np.ndarray:
         # Not at its most efficient state. Detects strings in commented lines
         stringLiteralCountSum = len(re.findall('(?:"(?:\\\\.|[^"\\\\])*"|\'(?:\\\\.|[^\'\\\\])*\')', files[i]))
 
-        feats[i, 0] = math.log(keywordCountSum/len(files[i]))
-        feats[i, 1] = math.log(operatorCountSum/len(files[i]))
-        feats[i, 2] = math.log(stringLiteralCountSum/len(files[i]))
+        if keywordCountSum != 0:
+            feats[i, 0] = math.log(keywordCountSum/len(files[i]))
+
+        if operatorCountSum != 0:
+            feats[i, 1] = math.log(operatorCountSum/len(files[i]))
+
+        if stringLiteralCountSum != 0:
+            feats[i, 2] = math.log(stringLiteralCountSum/len(files[i]))
 
     return feats
