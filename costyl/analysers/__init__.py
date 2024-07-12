@@ -9,6 +9,7 @@ def analyse_vectorized_files(vectorized_files_whole: list[str], vectorized_files
     """
     Analyse the files and return a matrix with the results of the analysis
     """
+    
     layout = layout_analysis(vectorized_files_lines)
     lexical = lexical_analysis(vectorized_files_whole)
 

@@ -25,7 +25,7 @@ def layout_analysis(files: list[list[str]]) -> np.ndarray:
     """
 
     feats = np.zeros((len(files),5))
-
+    
 
     for index, file in enumerate(files):
         tabIdent = 0

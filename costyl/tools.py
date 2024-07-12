@@ -3,26 +3,24 @@ import glob
 import os
 
 def get_authors_files_paths(path: str):
+    
     if os.name == "posix":
         files_paths = glob.glob(path.replace("'", "") + "/*/*.cpp")
-        files_labels = [path.split("/")[-2] for path in files_paths]
-        return files_paths, files_labels
+        return files_paths
 
     elif os.name == "nt":
         files_paths = glob.glob(path.replace("'", "") + "\*\*.cpp")
-        files_labels = [path.split("\\")[-2] for path in files_paths]
-        return files_paths, files_labels
+        return files_paths
 
 def get_target_files_paths(path: str):
+    
     if os.name == "posix":
         files_paths = glob.glob(path.replace("'", "") + "/*.cpp")
-        files_labels = [path.split("/")[-1].removesuffix(".cpp") for path in files_paths]
-        return files_paths, files_labels
+        return files_paths
 
     elif os.name == "nt":
         files_paths = glob.glob(path.replace("'", "") + "\*.cpp")
-        files_labels = [path.split("\\")[-1].removesuffix(".cpp") for path in files_paths]
-        return files_paths, files_labels
+        return files_paths
 
 
 def printTestsPredicts(y_test, predictedAuthor):
